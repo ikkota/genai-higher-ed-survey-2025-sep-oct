@@ -4,7 +4,7 @@
 
 ## 公開ページ
 
-https://ikkota.github.io/genai-higher-ed-survey-2025-sep-oct/
+https://genai-higher-ed-jp.github.io/survey-2025-sep-oct/
 
 ## 調査票（質問項目一覧）
 
