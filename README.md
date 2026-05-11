@@ -27,3 +27,9 @@ https://ikkota.github.io/genai-higher-ed-survey-2025-sep-oct/
 
 - 田中一孝（2026）「高等教育機関における生成AI導入の実態調査──目的と概要──」
 - 澁川幸加（2026）「高等教育機関における生成AI導入の実態調査──全国調査に基づく速報的分析──」
+
+## 関連リンク
+
+- [大学教育学会](https://jacue.org/)
+- [大学教育学会 課題研究](https://jacue.org/article/activity/research_project/researchprojects)
+- [課題研究活動報告書](https://jacue.org/article/activity/research_project/currentreports)
