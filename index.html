@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高等教育機関における生成AI導入の実態調査</title>
+  <style>
+    /* ============================================
+   Datawrapper-inspired academic factsheet
+   Colors: deep green, gray, red only
+   No thin/light text — readability first
+   ============================================ */
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+    :root {
+      --green: #1B5E20;
+      --green-mid: #4CAF50;
+      --red: #C62828;
+      --text: #333;
+      --text-sub: #555;
+      --border: #d4d4d4;
+      --track: #ececec;
+      --bg: #fff;
+    }
+
+    /* ===== RESET & BASE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      font-size: 9pt;
+      line-height: 1.7;
+    }
+
+    /* ===== PAGE ===== */
+    .page {
+      width: 210mm;
+      margin: 0 auto;
+    }
+
+    .page+.page {
+      border-top: 3px solid var(--green);
+    }
+
+    .page-bg {
+      background: linear-gradient(180deg, #f2f6f1 0%, #f7f7f4 100%);
+    }
+
+    /* ===== HEADER (page 1 only) ===== */
+    .header {
+      background: var(--green);
+      color: var(--bg);
+      padding: 28px 40px 24px;
+    }
+
+    .header-logo {
+      height: 28px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .header-org {
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-org-en {
+      display: block;
+      font-size: 7.5pt;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-top: 2px;
+    }
+
+    .header h1 {
+      font-size: 20pt;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .header-sub {
+      display: block;
+      font-size: 13pt;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .header-project {
+      font-size: 11pt;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .header-team {
+      font-size: 9pt;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .header-date {
+      margin-top: 8px;
+      font-size: 9pt;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* ===== BODY ===== */
+    .body {
+      padding: 25px 42px 24px;
+      flex: 1;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h2 {
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--green);
+      margin: 24px 0 9px 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    .page-title {
+      font-size: 16pt;
+      font-weight: 900;
+      color: var(--green);
+      border-bottom: 2px solid var(--green);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 6px 0 10px 20px;
+      font-size: 9pt;
+      line-height: 1.7;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    li strong {
+      color: var(--green);
+    }
+
+    .note {
+      font-size: 8pt;
+      color: var(--text-sub);
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    /* ===== PAGE MESSAGE & CONTEXT ===== */
+    .page-message {
+      border-left: 5px solid var(--green);
+      border-right: 5px solid var(--green);
+      background: linear-gradient(90deg, rgba(27, 94, 32, 0.10) 0%, rgba(27, 94, 32, 0.03) 50%, rgba(27, 94, 32, 0.10) 100%);
+      padding: 14px 18px;
+      margin: 0 0 20px 0;
+    }
+
+    .page-message-kicker {
+      font-size: 12pt;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .page-message p {
+      font-size: 9pt;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .context-grid {
+      display: flex;
+      gap: 14px;
+      margin: 6px 0 14px 0;
+    }
+
+    .context-card {
+      flex: 1;
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 11px 12px;
+    }
+
+    .context-card-subtle {
+      background: #f3f4f2;
+    }
+
+    .context-title {
+      font-size: 8pt;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .context-card p {
+      font-size: 8pt;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .note-panel {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      margin: 8px 0 14px 0;
+    }
+
+    .note-panel p {
+      font-size: 9pt;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .note-panel-alert {
+      background: #fff7f7;
+      border-left: 4px solid var(--red);
+    }
+
+    .note-panel-alert .context-title {
+      color: var(--red);
+    }
+
+    /* ===== PIE CHART ===== */
+    .pie-row {
+      display: flex;
+      gap: 24px;
+      margin: 8px 0 12px 0;
+    }
+
+    .pie-block {
+      flex: 1;
+    }
+
+    .pie {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: 6px 0 8px 0;
+    }
+
+    .pie-legend {
+      font-size: 8pt;
+      line-height: 1.8;
+    }
+
+    .pie-legend>div {
+      display: flex;
+      align-items: center;
+    }
+
+    .pie-legend .dot {
+      margin-right: 4px;
+      flex-shrink: 0;
+    }
+
+    .pie-legend strong {
+      font-weight: 900;
+      color: var(--text);
+      margin-left: auto;
+      min-width: 24px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ===== FIGURE CAPTION ===== */
+    .fig-caption {
+      font-size: 8pt;
+      font-weight: 700;
+      font-style: normal;
+      color: var(--text-sub);
+      letter-spacing: 0.02em;
+      margin: 12px 0 6px 0;
+    }
+
+    /* ===== HORIZONTAL BAR CHART ===== */
+    .chart {
+      margin-bottom: 14px;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .bar-label {
+      width: 210px;
+      flex-shrink: 0;
+      font-size: 8pt;
+      font-weight: 400;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 18px;
+      background: var(--track);
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--green);
+    }
+
+    .bar-fill.fill-red {
+      background: var(--red);
+    }
+
+    .bar-val {
+      width: 44px;
+      flex-shrink: 0;
+      text-align: right;
+      font-size: 9pt;
+      font-weight: 700;
+      padding-left: 6px;
+      color: var(--green);
+    }
+
+    .bar-val.val-red {
+      color: var(--red);
+    }
+
+    /* ===== 100% STACKED BAR ===== */
+    .stacked-chart {
+      margin-bottom: 16px;
+    }
+
+    .stacked-bar {
+      display: flex;
+      height: 28px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .stacked-seg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--bg);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .seg-dark {
+      background: var(--green);
+    }
+
+    .seg-mid {
+      background: var(--green-mid);
+    }
+
+    .seg-gray {
+      background: #888;
+      color: var(--bg);
+    }
+
+    .seg-lgray {
+      background: #bbb;
+      color: var(--text);
+    }
+
+    .seg-red {
+      background: var(--red);
+    }
+
+    .stacked-legend {
+      display: flex;
+      gap: 14px;
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 3px;
+      vertical-align: middle;
+      font-style: normal;
+    }
+
+    .dot-dark {
+      background: var(--green);
+    }
+
+    .dot-mid {
+      background: var(--green-mid);
+    }
+
+    .dot-gray {
+      background: #888;
+    }
+
+    .dot-lgray {
+      background: #bbb;
+    }
+
+    .dot-red {
+      background: var(--red);
+    }
+
+    /* Labeled stacked rows (Figure 11 style) */
+    .stacked-labeled {
+      margin-bottom: 3px;
+    }
+
+    .stacked-row-label {
+      display: block;
+      font-size: 8pt;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 1px;
+    }
+
+    .stacked-labeled .stacked-bar {
+      height: 20px;
+    }
+
+    .stacked-sep {
+      border-top: 1px dashed var(--border);
+      margin: 6px 0;
+    }
+
+    .stacked-group-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--green);
+      margin: 10px 0 4px 0;
+    }
+
+    .stacked-group-title.risk {
+      color: var(--red);
+    }
+
+    .stacked-labeled.risk-bg {
+      background: #fafafa;
+      padding: 2px 4px;
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    /* ===== HEADLINE NUMBERS ===== */
+    .headline-row {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    .headline-item {
+      flex: 1;
+      text-align: center;
+      padding: 16px 10px;
+      border-right: 1px solid var(--border);
+    }
+
+    .headline-item:last-child {
+      border-right: none;
+    }
+
+    .headline-num {
+      font-size: 36pt;
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .headline-num.headline-warn {
+      color: var(--red);
+    }
+
+    .headline-unit {
+      font-size: 0.5em;
+    }
+
+    .headline-label {
+      font-size: 9pt;
+      font-weight: 400;
+      color: var(--text);
+      margin-top: 4px;
+    }
+
+    /* ===== KEY FINDINGS INFOGRAPHIC ===== */
+    .kf-grid {
+      display: flex;
+      gap: 0;
+      border: 2px solid var(--green);
+      margin-bottom: 18px;
+    }
+
+    .kf-card {
+      flex: 1;
+      text-align: center;
+      padding: 14px 8px 10px;
+      border-right: 1px solid var(--border);
+    }
+
+    .kf-card:last-child {
+      border-right: none;
+    }
+
+    .kf-num {
+      font-size: 36pt;
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .kf-num.kf-warn {
+      color: var(--red);
+    }
+
+    .kf-unit {
+      font-size: 0.5em;
+    }
+
+    .kf-label {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-top: 4px;
+    }
+
+    .kf-note {
+      display: block;
+      font-size: 8pt;
+      font-weight: 400;
+      color: var(--text-sub);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .kf-section-title {
+      font-size: 12pt;
+      font-weight: 900;
+      color: var(--green);
+      margin: 18px 0 8px 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .kf-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 10px;
+    }
+
+    .kf-item {
+      flex: 1;
+      text-align: center;
+      padding: 6px 4px;
+    }
+
+    .kf-mid-num {
+      display: block;
+      font-size: 20pt;
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .kf-mid-num.kf-warn {
+      color: var(--red);
+    }
+
+    .kf-mid-label {
+      display: block;
+      font-size: 9pt;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-top: 4px;
+    }
+
+    .kf-compare {
+      font-size: 8pt;
+      margin-bottom: 10px;
+    }
+
+    .kf-compare-header {
+      display: flex;
+      font-weight: 700;
+      color: var(--text-sub);
+      padding: 0 0 3px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .kf-compare-header span {
+      flex: 1;
+      text-align: center;
+    }
+
+    .kf-compare-header span:first-child {
+      flex: 2;
+      text-align: left;
+    }
+
+    .kf-compare-row {
+      display: flex;
+      padding: 2px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .kf-compare-row span {
+      flex: 1;
+      text-align: center;
+    }
+
+    .kf-compare-row span:first-child {
+      flex: 2;
+      text-align: left;
+    }
+
+    .kf-compare-row .kf-warn {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .kf-compare-row .kf-good {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    /* ===== GAP TABLE ===== */
+    .gap-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 4px 0 8px 0;
+    }
+
+    .gap-table th {
+      background: var(--green);
+      color: var(--bg);
+      font-weight: 700;
+      padding: 3px 8px;
+      text-align: center;
+    }
+
+    .gap-table th:first-child {
+      text-align: left;
+    }
+
+    .gap-table td {
+      border-bottom: 1px solid var(--border);
+      padding: 2px 8px;
+      text-align: center;
+    }
+
+    .gap-table td:first-child {
+      text-align: left;
+    }
+
+    .gap-table td.val-red {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* ===== ZERO HIGHLIGHT ===== */
+    .zero-highlight {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border: 2px solid var(--red);
+      padding: 12px 32px;
+      margin: 20px auto;
+      width: fit-content;
+    }
+
+    .zero-num {
+      font-size: 36pt;
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .zero-unit {
+      font-size: 0.5em;
+    }
+
+    .zero-desc {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .kf-structure-title {
+      font-size: 12pt;
+      font-weight: 900;
+      color: var(--green);
+      margin: 18px 0 10px 0;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .kf-structure-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .kf-structure-card {
+      background: #fbfcfb;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--green);
+      padding: 10px 11px;
+      min-height: 86px;
+    }
+
+    .kf-structure-card h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .kf-structure-card p {
+      font-size: 8pt;
+      line-height: 1.6;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    /* ===== DATA TABLE ===== */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+      margin: 8px 0;
+    }
+
+    .data-table th {
+      background: var(--green);
+      color: var(--bg);
+      font-weight: 700;
+      padding: 4px 8px;
+      text-align: center;
+    }
+
+    .data-table th:first-child {
+      text-align: left;
+    }
+
+    .data-table td {
+      border-bottom: 1px solid var(--border);
+      padding: 3px 8px;
+      text-align: center;
+    }
+
+    .data-table td:first-child {
+      text-align: left;
+    }
+
+    .data-table td.val-red {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* ===== PROPOSALS ===== */
+    .proposal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .proposal-card {
+      background: #fbfcfb;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--green);
+      padding: 10px 11px;
+      min-height: 118px;
+    }
+
+    .proposal-index {
+      font-size: 20pt;
+      font-weight: 900;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .proposal-card h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .proposal-card p {
+      font-size: 8pt;
+      line-height: 1.6;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--green);
+      color: var(--bg);
+      padding: 16px 40px;
+      font-size: 8pt;
+      line-height: 1.7;
+      margin-top: auto;
+    }
+
+    .footer-title {
+      font-weight: 700;
+      font-size: 9pt;
+      margin-bottom: 4px;
+    }
+
+    .footer a {
+      color: #a5d6a7;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .footer em {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== PAGE 1: Key Findings ==================== -->
+  <div class="page">
+    <header class="header">
+      <div class="header-org"><img
+          src="data:image/png;base64,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"
+          alt="大学教育学会" class="header-logo"></div>
+      <h1>高等教育機関における<br>生成AI導入の実態調査<span class="header-sub">調査結果</span></h1>
+      <div class="header-project">課題研究「高等教育における生成AI利用のガイドラインに関する研究」｜ 2024〜2026年度</div>
+      <div class="header-team">
+        研究代表者：<span style="display:inline-block">田中一孝（桜美林大学）</span><br>
+        研究分担者：<span style="display:inline-block">松下佳代（京都大学）、</span><span
+          style="display:inline-block">斎藤有吾（新潟大学）、</span><span style="display:inline-block">村上正行（大阪大学）、</span><span
+          style="display:inline-block">渡邊浩一（福井県立大学）、</span><span style="display:inline-block">伊藤通子（東京都市大学）、</span><span
+          style="display:inline-block">羽倉尚人（東京都市大学）、</span><span style="display:inline-block">平山朋子（藍野大学）、</span><span
+          style="display:inline-block">杉山芳生（藍野大学）、</span><span style="display:inline-block">澁川幸加（中央大学）、</span><span
+          style="display:inline-block">石上敬子（近畿大学）、</span><span style="display:inline-block">田中孝平（北海道大学）、</span><span
+          style="display:inline-block">我喜屋まり子（京都大学）</span>
+      </div>
+      <div class="header-date">調査期間：2025年9月〜10月<br>調査結果公開：2026年4月</div>
+    </header>
+
+    <div class="body">
+      <h2 class="page-title">高等教育機関の長に「生成AI導入の実態調査」を実施</h2>
+
+      <div class="kf-grid">
+        <div class="kf-card">
+          <div class="kf-num">113</div>
+          <div class="kf-label">回答機関<span class="kf-note">全国1,165機関中</span></div>
+        </div>
+        <div class="kf-card">
+          <div class="kf-num">68.1<span class="kf-unit">%</span></div>
+          <div class="kf-label">生成AIガイドライン<br>「策定済み」または「策定中」<span class="kf-note">策定済み45.1% ＋ 策定中23.0%</span></div>
+        </div>
+        <div class="kf-card">
+          <div class="kf-num kf-warn">85.8<span class="kf-unit">%</span></div>
+          <div class="kf-label">最大の困難は<br>「ガイドラインの実質化」<span class="kf-note">技術理解の困難（28.3%）を大きく上回る</span></div>
+        </div>
+      </div>
+
+      <div class="kf-section-title">各領域で「特に行っていない」と回答した割合</div>
+      <div class="kf-row">
+        <div class="kf-item"><span class="kf-mid-num kf-warn">49.6%</span><span class="kf-mid-label">教員向け支援</span></div>
+        <div class="kf-item"><span class="kf-mid-num kf-warn">50.4%</span><span class="kf-mid-label">職員向け支援</span></div>
+        <div class="kf-item"><span class="kf-mid-num kf-warn">46.9%</span><span class="kf-mid-label">学生向け支援</span></div>
+        <div class="kf-item"><span class="kf-mid-num kf-warn">50.4%</span><span class="kf-mid-label">学内のAI環境整備</span>
+        </div>
+      </div>
+
+      <div class="zero-highlight">
+        <div class="zero-num">0<span class="zero-unit">%</span></div>
+        <div class="zero-desc">経済的理由による生成AI利用の不利（格差）に対応している例は、<br>回答した113機関からは確認されなかった</div>
+      </div>
+
+      <div class="kf-structure-title">要点</div>
+      <div class="kf-structure-grid">
+        <section class="kf-structure-card">
+          <h3>ガイドラインの実質化</h3>
+          <p>ガイドライン整備は進んでいるが、最大の難しさは、作成そのものより現場で機能させることにある。共通の基盤や手引きが求められている。</p>
+        </section>
+        <section class="kf-structure-card">
+          <h3>高大接続</h3>
+          <p>入学前の生成AI利用経験の把握はまだ十分に進んでおらず、中等教育との情報共有や接続の仕組みが必要である。</p>
+        </section>
+        <section class="kf-structure-card">
+          <h3>支援と実践手法の共有</h3>
+          <p>教職員と学生への支援は十分に広がっておらず、小規模校ほど対応に差がある。機関を超えた先行事例・教材の共有が鍵となる。</p>
+        </section>
+        <section class="kf-structure-card">
+          <h3>公平性と公的支援</h3>
+          <p>経済的理由による利用格差への対応はほぼ確認されていない。個別機関の努力だけでなく、公的な基盤整備が必要である。</p>
+        </section>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ==================== PAGE 2: 調査の概要 ==================== -->
+  <div class="page page-bg">
+
+    <div class="body">
+
+
+      <h2>生成AI利用を前提とした大学対応</h2>
+      <p>生成AIは、大学生にとって身近な学習ツールになりつつある。国内外の調査でも利用経験の広がりが示されており、大学には、これらが広く利用されることを前提としたルールや支援が求められている。</p>
+      <p>本調査では、ガイドラインの有無だけでなく、運用上の難しさ、支援体制、システム整備の状況まで含めて把握することを目指した。</p>
+
+      <h2>調査概要と解釈上の留意点</h2>
+      <div class="context-grid">
+        <div class="context-card">
+          <div class="context-title">調査概要</div>
+          <p><strong>対象：</strong>全国1,165の大学（4年制・短期大学）および高等専門学校<br>
+            <strong>方法：</strong>Googleフォームを用いたWebアンケート。各機関の機関長宛てに依頼状を送付し、回答を求めた。<br>
+            <strong>調査期間：</strong>2025年9月10日〜10月20日<br>
+            <strong>有効回答：</strong>113機関（回答率9.8%）<br>
+            <strong>設問構成：</strong>7セクション28項目<br>
+            <strong>倫理審査：</strong>桜美林大学研究倫理審査の承認を受けて実施（倫理審査番号：25020）
+          </p>
+        </div>
+        <div class="context-card context-card-subtle">
+          <div class="context-title">結果を見るときの注意</div>
+          <p>
+            回答は匿名で収集しており、特定の機関や個人を識別できる情報は含まない。一方で、回答率は9.8%にとどまり、収容定員1,000人未満の機関が約半数を占める。したがって、ここで示す結果は全国の高等教育機関全体をそのまま表すものではなく、回答した機関にみられた傾向として読むのが適切である。
+          </p>
+        </div>
+      </div>
+
+      <h2>回答機関の構成</h2>
+      <p>回答機関の約半数は収容定員1,000人未満で、学校種では私立大学（4年制）が47.7%を占めた。大規模機関の比率は相対的に小さいため、以下の図表にも中小規模機関の状況がやや強く反映されている可能性がある。</p>
+
+      <div class="pie-row">
+        <div class="pie-block">
+          <div class="fig-caption">図1　学校種別（複数選択）</div>
+          <div class="pie" style="background:conic-gradient(
+          #4E79A7 0% 44.2%,
+          #F28E2B 44.2% 68.3%,
+          #E15759 68.3% 89.2%,
+          #76B7B2 89.2% 95.0%,
+          #59A14F 95.0% 98.3%,
+          #BAB0AC 98.3% 100%
+        )"></div>
+          <div class="pie-legend">
+            <div><i class="dot" style="background:#4E79A7"></i>私立大学（4年制）<strong>53</strong></div>
+            <div><i class="dot" style="background:#F28E2B"></i>私立短期大学<strong>29</strong></div>
+            <div><i class="dot" style="background:#E15759"></i>国公立大学（4年制）<strong>25</strong></div>
+            <div><i class="dot" style="background:#76B7B2"></i>高等専門学校<strong>7</strong></div>
+            <div><i class="dot" style="background:#59A14F"></i>国公立短期大学<strong>4</strong></div>
+            <div><i class="dot" style="background:#BAB0AC"></i>通信制大学<strong>2</strong></div>
+          </div>
+        </div>
+        <div class="pie-block">
+          <div class="fig-caption">図2　収容定員（n=113）</div>
+          <div class="pie" style="background:conic-gradient(
+          #4E79A7 0% 49.6%,
+          #F28E2B 49.6% 75.2%,
+          #E15759 75.2% 89.4%,
+          #76B7B2 89.4% 97.3%,
+          #59A14F 97.3% 100%
+        )"></div>
+          <div class="pie-legend">
+            <div><i class="dot" style="background:#4E79A7"></i>1,000人未満<strong>56</strong></div>
+            <div><i class="dot" style="background:#F28E2B"></i>1,000〜4,000人<strong>29</strong></div>
+            <div><i class="dot" style="background:#E15759"></i>4,000〜8,000人<strong>16</strong></div>
+            <div><i class="dot" style="background:#76B7B2"></i>8,000〜16,000人<strong>9</strong></div>
+            <div><i class="dot" style="background:#59A14F"></i>16,000人以上<strong>3</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 3: ガイドライン策定の詳細 ==================== -->
+  <div class="page">
+
+    <div class="body">
+      <div class="page-message">
+        <div class="page-message-kicker">要点</div>
+        <p>ガイドラインを用意する機関は増えているが、見直しや更新まで含めた運用体制はまだ十分ではない。</p>
+      </div>
+
+      <h2>進むガイドライン策定と、「見直し体制」の課題</h2>
+      <p>学内ガイドラインについては、「策定済み」が45.1%、「策定中」が23.0%で、回答機関の約7割が何らかの形で整備を進めていた。この傾向は、UNESCO (2025) が示す国際的な状況ともおおむね重なる。</p>
+      <p>
+        一方で、「策定の予定はない」は31.9%で、1,000人未満の小規模校では44.6%にのぼった。また、策定済み機関の66.7%は初版のまま運用しており、技術の進展や社会の変化に合わせて継続的に見直すための運用体制はまだ十分ではないことがうかがえる。
+      </p>
+
+      <div class="fig-caption">図3　ガイドライン策定状況（n=113）</div>
+      <div class="stacked-chart">
+        <div class="stacked-bar">
+          <div class="stacked-seg seg-dark" style="width:45.1%"><span>策定済み 45.1%</span></div>
+          <div class="stacked-seg seg-mid" style="width:23.0%"><span>策定中 23.0%</span></div>
+          <div class="stacked-seg seg-gray" style="width:31.9%"><span>予定なし 31.9%</span></div>
+        </div>
+      </div>
+
+      <h2>記載内容は「リスク対応」が大半</h2>
+      <p>
+        ガイドラインに入れるべき内容として最も多く挙がったのは、「法令順守、プライバシー漏洩、偽情報等の注意事項」（94.5%）だった。これに「授業運営に関すること」（67.3%）、「適切・効果的な利用法の紹介」（62.7%）が続いた。
+      </p>
+      <p>一方で、「改訂方針」は48.2%にとどまった。回答機関では、何を盛り込むかに比べて、どう見直していくかの議論はまだ十分に進んでいない可能性がある。</p>
+
+      <div class="fig-caption">図4　ガイドラインに含まれている内容（複数選択、n=110）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">法令順守、プライバシー漏洩、偽情報等の使用に際して注意すべきことがら</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:94.5%"></div>
+          </div><span class="bar-val">94.5%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">担当教員の指示の必要性、不正対応、評価方法の工夫等、授業運営に関すること</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:67.3%"></div>
+          </div><span class="bar-val">67.3%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">生成AIの適切・効果的な利用法の紹介</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:62.7%"></div>
+          </div><span class="bar-val">62.7%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">生成AIが抱える社会問題（特定企業への情報集中、情報バイアスなど）への配慮</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:50.9%"></div>
+          </div><span class="bar-val">50.9%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">社会の状況に合わせたガイドラインの改訂方針</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:48.2%"></div>
+          </div><span class="bar-val">48.2%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">生成AI利用環境の整備、AIリテラシー科目設置など、生成AI導入に関する将来的な方針</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:40.9%"></div>
+          </div><span class="bar-val">40.9%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">生成AIの利用に関する能力開発・自己研鑽の奨励</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:31.8%"></div>
+          </div><span class="bar-val">31.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">情報学・情報教育関連学会・団体との連携関係</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:12.7%"></div>
+          </div><span class="bar-val">12.7%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 4: 困難点と支援体制 ==================== -->
+  <div class="page">
+
+    <div class="body">
+      <div class="page-message">
+        <div class="page-message-kicker">要点</div>
+        <p>最も大きな課題は、AIそのものを理解することではなく、ガイドラインを現場で機能させることにあった。支援体制についても、まだ広く整っているとは言い難い。</p>
+      </div>
+
+      <h2>運用上の最大の困難は「ガイドラインの実質化」</h2>
+      <p>
+        「困難」または「極めて困難」とする回答が最も多かったのは、「ガイドラインが順守されるよう実質的に機能させること」（85.8%）だった。次いで「技術進展の速さへの対応」（83.2%）、「リソースの準備」（77.0%）が続き、上位5項目はいずれも72%を超えた。
+      </p>
+      <p>これに対して、「生成AIとは何かを定義し説明すること」を困難とした割合は28.3%にとどまった。難しさの中心は、AIの説明そのものより、機関内で運用ルールや許容範囲を調整し続ける点にある。</p>
+
+      <div class="fig-caption">図5　ガイドライン策定における困難の程度（「困難」＋「極めて困難」の合計%、n=113）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">ガイドラインが順守されるよう実質的に機能させること</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:85.8%"></div>
+          </div><span class="bar-val">85.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">技術進展の速さへの対応</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:83.2%"></div>
+          </div><span class="bar-val">83.2%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">ガイドライン策定に関わるリソース（時間・人材等）の準備</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:77.0%"></div>
+          </div><span class="bar-val">77.0%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">内部関係者間の意識・価値観の統一</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:74.3%"></div>
+          </div><span class="bar-val">74.3%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">倫理・法的・プライバシー問題などの整理</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:72.6%"></div>
+          </div><span class="bar-val">72.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">学問分野の違いや多様な利用目的への配慮</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:67.3%"></div>
+          </div><span class="bar-val">67.3%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">ガイドラインに関する外部情報・先行事例の収集</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:47.8%"></div>
+          </div><span class="bar-val">47.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">生成AIとは何かを定義し説明すること</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:28.3%"></div>
+          </div><span class="bar-val">28.3%</span>
+        </div>
+      </div>
+
+      <h2>教職員・学生へのAI支援は「未実施」が最多</h2>
+      <p>教員・職員・学生向け支援のいずれにおいても、「特に行っていない」との回答が最多であった。教員向け49.6%、職員向け50.4%、学生向け46.9%と、約半数の機関では具体的な支援が行われていない。</p>
+      <p>支援している機関でも中心は研修会で、有料AIサービスの提供や独自システムの整備は1割前後にとどまる。支援は始まっているが、まだ限定的である。</p>
+      <div class="note-panel note-panel-alert">
+        <div class="context-title">懸念点</div>
+        <p>学生経済的理由によるAI格差（デジタル格差）に配慮した支援は、回答の中では確認されなかった。支援がないまま利用が広がれば、学生のAI利用環境の差が、そのまま学習機会の差につながるおそれがある。</p>
+      </div>
+
+      <div class="fig-caption">図6a　教員の生成AI活用に対する支援（複数選択、n=113）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">特に行っていない</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:49.6%"></div>
+          </div><span class="bar-val val-red">49.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">研修会を実施している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:25.7%"></div>
+          </div><span class="bar-val">25.7%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">状況を把握していない</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:11.5%"></div>
+          </div><span class="bar-val">11.5%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">有料AIサービスのアカウント発行や費用補助を行っている</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:10.6%"></div>
+          </div><span class="bar-val">10.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">AIツールの利用マニュアル作成や問い合わせ対応を行っている</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:10.6%"></div>
+          </div><span class="bar-val">10.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">シラバスにおいてAI利用の方針を記載するよう教員に依頼・推奨している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:8.8%"></div>
+          </div><span class="bar-val">8.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">教員用の生成AIシステムを開発・提供している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:4.4%"></div>
+          </div><span class="bar-val">4.4%</span>
+        </div>
+      </div>
+
+      <div class="fig-caption">図6b　職員の生成AI活用に対する支援（複数選択、n=113）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">特に行っていない</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:50.4%"></div>
+          </div><span class="bar-val val-red">50.4%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">研修会を実施している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:29.2%"></div>
+          </div><span class="bar-val">29.2%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">AI導入やチャットボット導入に伴うマニュアルやFAQを整備している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:10.6%"></div>
+          </div><span class="bar-val">10.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">有料AIサービスを利用するためのアカウント発行や費用補助を行っている</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:10.6%"></div>
+          </div><span class="bar-val">10.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">状況を把握していない</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:8.8%"></div>
+          </div><span class="bar-val">8.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">職員向けの生成AIシステムを開発・提供している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:6.2%"></div>
+          </div><span class="bar-val">6.2%</span>
+        </div>
+      </div>
+
+      <div class="fig-caption">図6c　学生の生成AI活用に対する支援（複数選択、n=113）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">特に行っていない</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:46.9%"></div>
+          </div><span class="bar-val val-red">46.9%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">既存科目で生成AIの活用方法を扱っている（または扱う計画がある）</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:38.1%"></div>
+          </div><span class="bar-val">38.1%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">生成AIに関連した新しい科目を設置している（または設置を計画している）</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:9.7%"></div>
+          </div><span class="bar-val">9.7%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">状況を把握していない</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:7.1%"></div>
+          </div><span class="bar-val">7.1%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">ChatGPT Plusなど有料サービスを学生に割引または無償提供している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:6.2%"></div>
+          </div><span class="bar-val">6.2%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">学生向け研修会を実施している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:3.5%"></div>
+          </div><span class="bar-val">3.5%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">学生用の生成AIシステムを開発・提供している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:2.7%"></div>
+          </div><span class="bar-val">2.7%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">経済的理由による生成AI利用格差を解消する支援を実施している</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:0.5%"></div>
+          </div><span class="bar-val val-red">0%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">多様な背景に応じた公平なAIアクセス環境を整備している（例：言語、障がい、学習スタイル、ジェンダーなど）</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:0.5%"></div>
+          </div><span class="bar-val val-red">0%</span>
+        </div>
+      </div>
+      <p class="note">複数選択可。1%未満の自由記述回答は省略。0%の項目はバーを最小幅で表示。</p>
+
+      <h2>AIシステム基盤は「特に行っていない」が過半数</h2>
+      <p>AI関連のシステム基盤について、「特に何もしていない」が50.4%と最多であった。有料AIサービス（ChatGPT
+        Edu、Copilot等）のアカウント提供は26.5%、外部APIの学内システムへの統合は15.9%にとどまり、過半数の機関ではインフラが未整備のまま利用が進んでいる状況がうかがえる。</p>
+
+      <div class="fig-caption">図7　生成AIに関連するシステムの導入・開発形態（複数選択、n=113）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">特に何もしていない</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:50.4%"></div>
+          </div><span class="bar-val val-red">50.4%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">ChatGPT Edu、ChatGPT Plus、Microsoft Copilot
+            など有料AIサービスのアカウントを学内で利用できるようにしている</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:26.5%"></div>
+          </div><span class="bar-val">26.5%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">学外のサービス（例：Azure AI、Google Cloud Gemini API
+            等）を学内システムに取り込んで活用している</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:15.9%"></div>
+          </div><span class="bar-val">15.9%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">主として学内のリソースを用いて、独自に開発を行っている</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:7.1%"></div>
+          </div><span class="bar-val">7.1%</span>
+        </div>
+      </div>
+
+      <h2>機関間における「AI格差」への懸念</h2>
+      <p>
+        収容定員別にみると、小規模校（4,000人未満）と大規模校（4,000人以上）の間には、ガイドライン策定やシステム整備で大きな差がみられる。特に注目すべきは、「有料AIサービスの提供」における約2.7倍の差（18.8%対50.0%）である。
+      </p>
+      <p>
+        生成AIが学生にとって日常的な学習インフラとして定着しつつある現在、これらの高機能なサービスへのアクセスが所属機関によって左右される状況は、看過できないデジタル格差・AI格差の予兆を示している。各機関の自助努力に委ねるだけでなく、高等教育全体としての公的支援や共同調達といった枠組みが求められる。
+      </p>
+      <div class="fig-caption">表1　機関規模による対応差</div>
+      <div class="kf-compare">
+        <div class="kf-compare-header">
+          <span></span><span>4,000人未満</span><span>4,000人以上</span>
+        </div>
+        <div class="kf-compare-row"><span>ガイドライン「策定予定なし」</span><span class="kf-warn">37.6%</span><span>14.3%</span>
+        </div>
+        <div class="kf-compare-row"><span>職員向け支援「未実施」</span><span class="kf-warn">61.2%</span><span>17.9%</span></div>
+        <div class="kf-compare-row"><span>AI関連システム「未整備」</span><span class="kf-warn">60.0%</span><span>21.4%</span></div>
+        <div class="kf-compare-row"><span>有料AIサービス提供</span><span>18.8%</span><span class="kf-warn">50.0%</span></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- ==================== PAGE 5: 態度と策定主体 ==================== -->
+  <div class="page">
+
+    <div class="body">
+      <div class="page-message">
+        <div class="page-message-kicker">要点</div>
+        <p>生成AIへの期待は大きいが、学習への影響については慎重な見方も多い。ガイドラインは、共通の考え方を持ちつつ、各機関の事情に合わせて整える形が望まれている。</p>
+      </div>
+
+      <h2>高い「業務への期待」と、慎重な「学習への影響」</h2>
+      <p>「教職員の業務効率化および授業設計支援につながる」には94.6%が肯定的に回答しており、業務改善への期待は非常に大きい。</p>
+      <p>一方で、「学生の思考力・判断力・批判的思考の低下リスクを高める」は、肯定47.3%と中立46.4%がほぼ並んだ。生成AIを一律に否定する見方は少ないが、学習への影響は慎重に見極めようとしている機関が多い。</p>
+
+      <div class="fig-caption">図8　生成AIの高等教育への影響に対する見方（n=110-111）</div>
+      <div class="stacked-chart">
+        <div class="stacked-legend">
+          <span><i class="dot dot-dark"></i>肯定的（そう思う）</span>
+          <span><i class="dot dot-lgray"></i>どちらでもない</span>
+          <span><i class="dot dot-red"></i>否定的（そう思わない）</span>
+        </div>
+        <div class="stacked-group-title">生成AIへの期待</div>
+        <div class="stacked-labeled">
+          <span class="stacked-row-label">教職員の業務効率化および授業設計支援につながる</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:94.6%"><span>94.6%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:5.4%"><span>5.4%</span></div>
+          </div>
+        </div>
+        <div class="stacked-labeled">
+          <span class="stacked-row-label">PCなどと同程度に中立的なツールとして活用される</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:67.3%"><span>67.3%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:25.5%"><span>25.5%</span></div>
+            <div class="stacked-seg seg-red" style="width:7.3%"><span>7.3%</span></div>
+          </div>
+        </div>
+        <div class="stacked-labeled">
+          <span class="stacked-row-label">高等教育の社会的な価値をさらに高める</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:57.3%"><span>57.3%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:36.4%"><span>36.4%</span></div>
+            <div class="stacked-seg seg-red" style="width:6.4%"><span>6.4%</span></div>
+          </div>
+        </div>
+        <div class="stacked-labeled">
+          <span class="stacked-row-label">学生の学修の質を向上させる</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:52.7%"><span>52.7%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:41.8%"><span>41.8%</span></div>
+            <div class="stacked-seg seg-red" style="width:5.5%"><span>5.5%</span></div>
+          </div>
+        </div>
+        <div class="stacked-group-title">生成AIへの懸念</div>
+        <div class="stacked-labeled risk-bg">
+          <span class="stacked-row-label">学生の思考力・判断力・批判的思考の低下リスクを高める</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:47.3%"><span>47.3%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:46.4%"><span>46.4%</span></div>
+            <div class="stacked-seg seg-red" style="width:6.4%"><span>6.4%</span></div>
+          </div>
+        </div>
+        <div class="stacked-labeled risk-bg">
+          <span class="stacked-row-label">学生間の学修成果の格差を広める</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:40.9%"><span>40.9%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:46.4%"><span>46.4%</span></div>
+            <div class="stacked-seg seg-red" style="width:12.7%"><span>12.7%</span></div>
+          </div>
+        </div>
+        <div class="stacked-labeled risk-bg">
+          <span class="stacked-row-label">高等教育機関の格差を広める</span>
+          <div class="stacked-bar">
+            <div class="stacked-seg seg-dark" style="width:33.6%"><span>33.6%</span></div>
+            <div class="stacked-seg seg-lgray" style="width:51.8%"><span>51.8%</span></div>
+            <div class="stacked-seg seg-red" style="width:14.5%"><span>14.5%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>機関固有ガイドラインと求められる共通基盤</h2>
+      <p>
+        ガイドラインの策定主体としては、「各機関が独自に策定すべき」（66.4%）と「文部科学省が共通ガイドラインを策定すべき」（56.4%）が上位を占めた。複数選択であることを踏まえると、共通の土台が示された上で、各機関が自校の事情に合わせて柔軟に調整する形が望まれているとみられる。
+      </p>
+
+      <div class="fig-caption">図9　ガイドラインの策定主体はどうあるべきか（複数選択、n=110）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">各高等教育機関が固有の教育・運営方針のもとガイドラインを策定すべき</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:66.4%"></div>
+          </div><span class="bar-val">66.4%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">文部科学省が共通ガイドラインを策定すべき</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:56.4%"></div>
+          </div><span class="bar-val">56.4%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">高等教育全体が協力して共通のガイドラインを策定すべき</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:24.5%"></div>
+          </div><span class="bar-val">24.5%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">授業・科目ごとに教員がポリシーを示すべき</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:21.8%"></div>
+          </div><span class="bar-val">21.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">学会などが主導して学問分野ごとにガイドラインを策定すべき</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:15.5%"></div>
+          </div><span class="bar-val">15.5%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 6: 中等教育・研究・展望 ==================== -->
+  <div class="page">
+
+    <div class="body">
+      <div class="page-message">
+        <div class="page-message-kicker">要点</div>
+        <p>入学前や研究での生成AI利用について、大学は十分に把握できていない。また、今後の重点は、ガイドライン整備を続けながら、教育や研修の充実へと移りつつある。</p>
+      </div>
+
+      <h2>入学前の「AI利用経験」は8割超が十分把握せず</h2>
+      <p>中等教育段階での生成AI活用については、「限定的にしか把握していない」と「全く把握していない」を合わせると85.9%に達した。多くの機関は、入学してくる学生がどの程度AIに触れてきたのかを十分には把握できていない。</p>
+      <p>一方で、高校生のAI利用は広がっている。スタディサプリ進路 (2025) の調査では、高校生の9割が生成AIの利用経験があると答えており、これら「AIネイティブ世代」（Oxford University Press,
+        2025）の受け入れに向けて、高大間でのAIリテラシーに関する情報共有が急務となっている。</p>
+
+      <div class="fig-caption">図10　中等教育における生成AI活用状況の把握度（n=113）</div>
+      <div class="stacked-chart">
+        <div class="stacked-bar">
+          <div class="stacked-seg seg-dark" style="width:3.5%"></div>
+          <div class="stacked-seg seg-mid" style="width:8.0%"></div>
+          <div class="stacked-seg seg-lgray" style="width:49.6%"><span>限定的 49.6%</span></div>
+          <div class="stacked-seg seg-red" style="width:36.3%"><span>全く把握していない 36.3%</span></div>
+        </div>
+        <div class="stacked-legend">
+          <span><i class="dot dot-dark"></i>詳細に把握 3.5%</span>
+          <span><i class="dot dot-mid"></i>ある程度 8.0%</span>
+          <span><i class="dot dot-lgray"></i>限定的</span>
+          <span><i class="dot dot-red"></i>全く把握していない</span>
+        </div>
+      </div>
+
+      <h2>「研究活動でのAI利用」の把握状況と国の指針への期待</h2>
+      <div class="note-panel">
+        <p>
+          研究活動における生成AI利用は、「ほとんど把握していない」が58.6%を占めた。また、研究利用に関するガイドラインの策定主体については「国や行政機関」（68.5%）や「高等教育機関の中央組織」（58.6%）が上位に挙がった。これは「学問分野ごとの学会や専門団体」（30.6%）も上回っており、研究者の自己裁量（4.5%）に委ねるよりも、国や大学といった上位組織による包括的で明確な指針の提示が強く求められている。背景には、生成AIの利用が分野ごとの研究手法という枠を超え、情報漏洩等の法的リスクやシステム整備を伴うガバナンス課題として捉えられているのかもしれない。
+        </p>
+      </div>
+
+      <h2>今後の重点施策は「学生教育」と「教職員研修」</h2>
+      <p>
+        今後の重点施策では、「学生向けリテラシー教育の強化」（75.2%）と「教職員向け研修体制の充実」（70.8%）が上位を占め、「ガイドラインの整備・改訂」（61.1%）を上回った。ガイドライン整備は引き続き重要だが、焦点は、ルールを整える段階から、現場で使いこなすための教育支援や能力開発へ移りつつある。
+      </p>
+
+      <div class="fig-caption">図11　生成AIに関して今後重点的に取り組むべき施策（複数選択、n=113）</div>
+      <div class="chart">
+        <div class="bar-row"><span class="bar-label">学生向けリテラシー教育の強化</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:75.2%"></div>
+          </div><span class="bar-val">75.2%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">教職員向けの研修体制の充実</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:70.8%"></div>
+          </div><span class="bar-val">70.8%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">ガイドラインの整備・改訂</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:61.1%"></div>
+          </div><span class="bar-val">61.1%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">分野別の専門科目や活用事例の拡充</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:22.1%"></div>
+          </div><span class="bar-val">22.1%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">高校との連携・連動プログラムの実施</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:10.6%"></div>
+          </div><span class="bar-val">10.6%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">特にそうした施策を行う予定はない</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:9.7%"></div>
+          </div><span class="bar-val">9.7%</span>
+        </div>
+        <div class="bar-row"><span class="bar-label">経済力、ジェンダー、母国語に由来するAI利用環境や情報格差の是正</span>
+          <div class="bar-track">
+            <div class="bar-fill fill-red" style="width:4.4%"></div>
+          </div><span class="bar-val val-red">4.4%</span>
+        </div>
+      </div>
+      <div class="note-panel note-panel-alert">
+        <div class="context-title">様々な背景から生じるデジタル格差</div>
+        <p>
+          「経済力・ジェンダー・母国語に由来する格差の是正」を重点施策に挙げた機関は4.4%にとどまった。現在の支援状況（図6c：関連する支援を行っている機関が0%）とあわせると、格差是正の必要性は認識されつつも、課題としての優先順位は低く考えられている可能性がある。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 7: 提言 ==================== -->
+  <div class="page">
+
+    <div class="body">
+      <h2 class="page-title">本調査からの提言</h2>
+      <div class="page-message">
+        <div class="page-message-kicker">「機関単独の努力」から「全体で支えるインフラ」へ</div>
+        <p>
+          生成AIへの対応は、もはや各機関が単独で抱えきれる課題ではない。これからの高等教育全体を下支えしていくため、本調査では4つのアプローチを提言する。「学内」での運用から始まり、「高大間」や「大学間」の相互連携、そして「国・社会」レベルの公的基盤へと、多層的に対応の視野と規模を広げていくことが不可欠である。
+        </p>
+      </div>
+
+      <div class="proposal-grid">
+        <section class="proposal-card">
+          <div class="proposal-index">1</div>
+          <h3>【学内】学内ガイドラインの運用と実質化</h3>
+          <p>生成AIガイドラインの実質化や見直しは、現状最大の課題となっている。各機関がゼロから作るのではなく、最低限の項目や実践事例のひな形を広く共有できる土台が必要である。</p>
+        </section>
+        <section class="proposal-card">
+          <div class="proposal-index">2</div>
+          <h3>【高大間】中等教育の状況をふまえた接続</h3>
+          <p>入学前の生成AI利用経験はすでに広がっている。高校までにいかなる学習経験を積んできたかを把握し、大学の初年次教育や授業設計へ確実につなげる仕組みが必要である。</p>
+        </section>
+        <section class="proposal-card">
+          <div class="proposal-index">3</div>
+          <h3>【大学間】孤立を防ぐ実践共有ネットワーク</h3>
+          <p>リソースの限られる小規模校を中心に、対応の差が広がりつつある。高等教育全体で知見を底上げできるよう、先行事例や失敗事例を共有し合える場が不可欠である。</p>
+        </section>
+        <section class="proposal-card">
+          <div class="proposal-index">4</div>
+          <h3>【国・社会】インフラ格差を抑える公的支援</h3>
+          <p>生成AIへの公平なアクセス確保を個別機関の努力に委ねるには限界がある。共同調達や一括ライセンス、財政支援など、高等教育全体を基盤から支える公的・共同的な枠組みの構築が急務である。</p>
+        </section>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>本調査については、以下の論文において報告予定です。</p>
+      <p>田中一孝（2026）「高等教育機関における生成AI導入の実態調査──目的と概要──」『大学教育学会誌』48(1), 印刷中.<br>
+        澁川幸加（2026）「高等教育機関における生成AI導入の実態調査──全国調査に基づく速報的分析──」『大学教育学会誌』48(1), 印刷中.</p>
+
+      <div class="footer-title" style="margin-top:8px;">参考文献</div>
+      <p>Freeman, J. (2025). <em>Student generative AI survey 2025.</em> HEPI Policy Note 61. <a
+          href="https://www.hepi.ac.uk/reports/student-generative-ai-survey-2025/">https://www.hepi.ac.uk/reports/student-generative-ai-survey-2025/</a><br>
+        Oxford University Press (2025). <em>Teaching the AI-Native Generation: Empowering Schools in the Age of
+          AI.</em><br>
+        スタディサプリ進路 (2025)「現役高校生が回答！利用経験が90%超え「生成AI」に関するアンケート2025」<a
+          href="https://shingakunet.com/journal/fromsapuri/20250903000003/">https://shingakunet.com/journal/fromsapuri/20250903000003/</a><br>
+        UNESCO (2025). <em>UNESCO survey: Two-thirds of higher education institutions have or are developing guidance on
+          AI use.</em> <a
+          href="https://www.unesco.org/en/articles/unesco-survey-two-thirds-higher-education-institutions-have-or-are-developing-guidance-ai-use">https://www.unesco.org/en/articles/unesco-survey-two-thirds-higher-education-institutions-have-or-are-developing-guidance-ai-use</a><br>
+        全国大学生活協同組合連合会 (2025)『第60回学生生活実態調査 概要報告』<a
+          href="https://www.univcoop.or.jp/vision/vision_493.html">https://www.univcoop.or.jp/vision/vision_493.html</a>
+      </p>
+
+      <div class="footer-title" style="margin-top:8px;">謝辞</div>
+      <p>本調査の実施にあたり、ご多忙の中、ご協力いただいた各高等教育機関の担当者の皆様に感謝申し上げます。</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
