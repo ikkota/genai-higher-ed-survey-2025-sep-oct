@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://genai-higher-ed-jp.github.io/survey-2025-sep-oct/sitemap.xml
